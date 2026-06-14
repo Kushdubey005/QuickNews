@@ -31,8 +31,9 @@ export class News extends Component {
   }
   
   async componentDidMount() {
+    console.log("componentDidMount called");
   this.props.setProgress(10);
-  const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=in&max=${this.props.pageSize}&page=1&apikey=${process.env.apikey}`;
+  const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=in&max=${this.props.pageSize}&page=1&apikey=${process.env.REACT_APP_API_KEY}`;
 
   let data = await fetch(url);
   let parsedData = await data.json();
@@ -48,7 +49,7 @@ export class News extends Component {
  fetchMore = async () => {
   const nextPage = this.state.page + 1;
 
-  const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=in&max=${this.props.pageSize}&page=${nextPage}&apikey=${process.env.apikey}`;
+  const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=in&max=${this.props.pageSize}&page=${nextPage}&apikey=${process.env.REACT_APP_API_KEY}`;
 
   let data = await fetch(url);
   let parsedData = await data.json();
