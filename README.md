@@ -19,7 +19,7 @@ A React-based news application that fetches real-time news using GNews API.
 
 ![QuickNews Screenshot](./## Preview
 
-![QuickNews Screenshot](./screenshotshomepage.png.png))
+![QuickNews Screenshot](./screenshothomepage.png.png))
 
 ## Installation
 
